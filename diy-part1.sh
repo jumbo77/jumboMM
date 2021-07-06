@@ -11,6 +11,8 @@
 #
 cp feeds.conf.default feeds.conf
 echo "src-git mmdvm https://github.com/lazywalker/mmdvm-openwrt" >> feeds.conf
+./scripts/feeds update -a
+./scripts/feeds install -a -pmmdvm
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 #git clone https://github.com/lazywalker/mmdvm-openwrt package/mmdvm-openwrt
