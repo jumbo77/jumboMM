@@ -9,9 +9,10 @@
 # File name: diy-part1.sh
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
-
+cp feeds.conf.default feeds.conf
+echo "src-git mmdvm https://github.com/lazywalker/mmdvm-openwrt" >> feeds.conf
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
-git clone https://github.com/lazywalker/mmdvm-openwrt package/mmdvm-openwrt
+#git clone https://github.com/lazywalker/mmdvm-openwrt package/mmdvm-openwrt
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
