@@ -13,6 +13,7 @@ cp feeds.conf.default feeds.conf
 echo "src-git mmdvm https://github.com/lazywalker/mmdvm-openwrt" >> feeds.conf
 ./scripts/feeds update -a
 ./scripts/feeds install -a -pmmdvm
+wget -P package/feeds/luci/luci-base/luasrc/model/cbi https://github.com/mpaolino/openwrt/raw/master/proto_3g.lua
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 #git clone https://github.com/lazywalker/mmdvm-openwrt package/mmdvm-openwrt
